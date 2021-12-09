@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy todir="/home/sepehr/d4j-test-generation/Lang1b/target/apidocs/META-INF">
+    <fileset dir="/home/sepehr/d4j-test-generation/Lang1b">
+      <include name="LICENSE.txt"/>
+      <include name="NOTICE.txt"/>
+    </fileset>
+  </copy>
+</target>
+</project>
