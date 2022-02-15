@@ -14,10 +14,10 @@ else
 fi
 export EVOSUITE="java -jar $(pwd)/evosuite-1.0.6.jar"
 # $EVOSUITE -class org.apache.commons.lang3.CSVFormat -projectCP target/classes
-# $EVOSUITE  -target target/classes
+$EVOSUITE  -target target/classes
 mvn dependency:copy-dependencies
 export CLASSPATH=target/classes:evosuite-standalone-runtime-1.0.6.jar:evosuite-tests:target/dependency/junit-4.12.jar:target/dependency/hamcrest-core-1.3.jar
 javac evosuite-tests/org/apache/commons/lang3/*.java 
 java org.junit.runner.JUnitCore org.apache.commons.lang3.DateUtils_ESTest
 # mvn test
-$EVOSUITE -measureCoverage -class org.apache.commons.lang3.DateUtils -Djunit=org.apache.commons.lang3.DateUtils_ESTest -criterion branch -projectCP target/classes:target/test-classes:evosuite-tests
+$EVOSUITE -measureCoverage -class org.apache.commons.lang3.AnnotationUtils -Djunit=org.apache.commons.lang3.AnnotationUtils_ESTest -criterion branch -projectCP target/classes:target/test-classes:evosuite-tests
