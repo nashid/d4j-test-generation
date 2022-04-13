@@ -428,10 +428,28 @@
 
   <!-- Lang should depend on very little -->
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.evosuite/evosuite-runtime -->
+    <dependency>
+      <groupId>org.evosuite</groupId>
+      <artifactId>evosuite-runtime</artifactId>
+      <version>1.0.6</version>
+    </dependency>
+    <dependency>
+      <!-- MIT -->
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <version>2.0.2-beta</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
 
@@ -442,12 +460,35 @@
       <scope>test</scope>
     </dependency>
 
+
+    <dependency>
+      <groupId>org.evosuite</groupId>
+      <artifactId>evosuite-shaded</artifactId>
+      <version>1.0.6</version>
+    </dependency>
+
     <dependency>
       <groupId>org.easymock</groupId>
       <artifactId>easymock</artifactId>
       <version>3.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+    <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>1.10.19</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
 
   <distributionManagement>
